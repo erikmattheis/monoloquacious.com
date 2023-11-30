@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     async submit() {
-      const response = await superagent.post('/netlify/functions/orator')
+      const response = await superagent.post('./netlify/functions/orator')
         .send({ prompt: this.prompt, voice: this.voice })
         .then(res => {
           this.monologue = res.body.monologue
